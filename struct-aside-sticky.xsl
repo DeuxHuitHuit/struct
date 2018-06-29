@@ -18,7 +18,7 @@
 		</xsl:variable>
 
 		<xsl:variable name="computed-attr-aside">
-			<xsl:copy-of select="$recipe--sticky-top" />
+			<add class="sticky top" />
 			<add class="max-height-full-viewport" />
 			<add class="overflow-y-auto overflow-scrolling-touch" />
 			<xsl:copy-of select="$attr-aside" />
