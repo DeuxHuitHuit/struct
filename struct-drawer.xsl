@@ -68,15 +68,15 @@
 		<xsl:call-template name="element">
 			<xsl:with-param name="attr" select="$attr" />
 			<xsl:with-param name="content">
-				<!-- TRIGGER CTN -->
+				<!-- Trigger ctn -->
 				<xsl:call-template name="element">
 					<xsl:with-param name="attr" select="$attr-trigger-ctn" />
 					<xsl:with-param name="content">
-						<!-- FAKE TRIGGER -->
+						<!-- Fake trigger -->
 						<xsl:if test="$has-fake-trigger">
 							<xsl:copy-of select="$content-fake-trigger" />
 						</xsl:if>
-						<!-- TRIGGER -->
+						<!-- Trigger -->
 						<xsl:call-template name="element">
 							<xsl:with-param name="attr" select="$attr-trigger" />
 							<xsl:with-param name="content">
@@ -86,7 +86,7 @@
 					</xsl:with-param>
 				</xsl:call-template>
 				
-				<!-- SLIDE -->
+				<!-- Slide -->
 				<xsl:call-template name="element">
 					<xsl:with-param name="attr" select="$attr-slide" />
 					<xsl:with-param name="content">

@@ -35,13 +35,13 @@
 		<xsl:call-template name="element">
 			<xsl:with-param name="attr" select="$attr" />
 			<xsl:with-param name="content">
-				<!-- ASIDE -->
+				<!-- Aside -->
 				<xsl:call-template name="element">
 					<xsl:with-param name="attr" select="$attr-aside" />
 					<xsl:with-param name="element" select="'aside'" />
 					<xsl:with-param name="content" select="$content-aside" />
 				</xsl:call-template>
-				<!-- MAIN -->
+				<!-- Main -->
 				<xsl:call-template name="element">
 					<xsl:with-param name="attr" select="$attr-main" />
 					<xsl:with-param name="element" select="'main'" />
