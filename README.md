@@ -13,7 +13,7 @@ When you want 2 elements side by side, and one of them (aside) is sticky.
 ---
 
 ## Drawer
-```struct-aside-drawer.xsl```
+```struct-drawer.xsl```
 When you want a drawer behavior. 
 
 #### Content
@@ -26,4 +26,20 @@ When you want a drawer behavior.
 "modules/change-state.js",
 "modules/slide.js",
 "modules/auto-slide-click.js"
+```
+
+---
+
+## Modal
+```struct-modal.xsl```
+Creates a modal, either for a page or a simple element.
+
+#### Content
+- Close: The element that will trigger a closing action
+- Modal: The actual content of the modal
+
+#### Dependencies
+```
+"modules/change-state.js",
+"modules/auto-change-change-click.js"
 ```
