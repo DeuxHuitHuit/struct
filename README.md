@@ -41,5 +41,5 @@ Creates a modal, either for a page or a simple element.
 #### Dependencies
 ```
 "modules/change-state.js",
-"modules/auto-change-change-click.js"
+"modules/auto-change-state-click.js"
 ```
