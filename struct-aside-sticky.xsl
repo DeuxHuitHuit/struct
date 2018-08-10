@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+<!-- 
+	When you want 2 elements side by side, and one of them (aside) is sticky.
+
+	Content
+		aside: The sticky element. Max height of viewport by default
+		main: Content that flows normally on the page.
+ -->
+
+
 <!-- COMPONENT: struct-aside-sticky -->
 	<xsl:template name="struct-aside-sticky">
 		<xsl:param name="content-aside" />
