@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+<!-- 
+	When you want a drawer behavior.
+
+	Content
+		fake-trigger: Visually beside the Trigger but does not change slide state. Useful to add a button for exemple.
+		trigger: Changes the state of the slide
+		slide: The element that slides up or down
+
+	Options
+		is-open: Determines weither or not the slide is open or not
+
+	Dependencies
+		modules/change-state.js
+		modules/slide.js
+		modules/auto-slide-click.js
+ -->
+
 <!-- COMPONENT: struct-drawer -->
 	<xsl:template name="struct-drawer">
 		<xsl:param name="content-fake-trigger" />
