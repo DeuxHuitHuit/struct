@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+<!-- 
+	Creates a modal, either for a page or a simple element.
+
+	Content
+		modal: The actual content of the modal
+		close: The element that will trigger a closing action
+
+	Options
+		id: Unique identifier used to easily target a specific modal
+		is-visible: Determines if the modal starts visible or not
+		is-page: Changes the behavior of the modal to make it work as a page
+
+	Dependencies
+		modules/change-state.js
+		modules/auto-change-state-click.js
+-->
+
+
 <!-- COMPONENT: struct-modal -->
 	<xsl:template name="struct-modal">
 		<xsl:param name="content-modal" />
@@ -67,6 +85,7 @@
 
 		<xsl:variable name="attr-ctn">
 			<add class="z-index-1" />
+			<add class="transition-ctn" />
 			<xsl:copy-of select="$ext-attr-ctn" />
 			<add dev-element="ctn" />
 		</xsl:variable>
