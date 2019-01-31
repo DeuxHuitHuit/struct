@@ -43,3 +43,18 @@ Creates a modal, either for a page or a simple element.
 "modules/change-state.js",
 "modules/auto-change-state-click.js"
 ```
+
+---
+
+## Scroll bounds
+```struct-scroll-bounds.xsl```
+Generates gradients when scroll is enabled
+
+#### Content
+- Content: Will be inside the scrollable div
+
+#### Dependencies
+```
+"modules/auto-state-on-scroll-bounds.js",
+"./struct-scroll-bounds.less"
+```

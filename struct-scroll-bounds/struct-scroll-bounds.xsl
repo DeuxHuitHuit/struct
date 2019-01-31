@@ -2,7 +2,10 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <!-- 
-	Generates gradients when scroll is enabled 
+	Generates gradients when scroll is enabled
+
+	Content
+		content: Will be inside the scrollable div
 
 	Options
 		threshold: [0-1] Percentage of scroll to toggle bounds states
