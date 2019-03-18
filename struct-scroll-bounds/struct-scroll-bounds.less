@@ -1,0 +1,98 @@
+// util-transition.less
+//=========================
+// = BOUNDS GRADIENTS
+//=========================
+.transition-x-scroll(@duration: 200ms) {
+	&:before,
+	&:after {
+		.fade-out(@duration);
+	}
+	// ~> NOT X START
+	&:not(.is-x-start) {
+		&:before {
+			.fade-in(@duration);
+		}
+	}
+	// ~> NOT X END
+	&:not(.is-x-end) {
+		&:after {
+			.fade-in(@duration);
+		}
+	}
+}
+
+.transition-y-scroll(@duration: 200ms) {
+	&:before,
+	&:after {
+		.fade-out(@duration);
+	}
+	// ~> NOT Y START
+	&:not(.is-y-start) {
+		&:before {
+			.fade-in(@duration);
+		}
+	}
+	// ~> NOT Y END
+	&:not(.is-y-end) {
+		&:after {
+			.fade-in(@duration);
+		}
+	}
+}
+
+.transition-scroll-bounds-ctn {
+	&.is-horizontal {
+		.transition-x-scroll;
+	}
+	&.is-vertical {
+		.transition-y-scroll;
+	}
+}
+
+// util-custom.less
+//=========================
+// = BOUNDS GRADIENTS
+//=========================
+
+.bounds-gradient-base { 
+	&:before,
+	&:after {
+		content:'';
+		position: absolute;
+		z-index: 10;
+		pointer-events: none;
+	}
+}
+
+.bounds-gradient-horizontal(@start: white, @end: rgba(255,255,255,0), @width: 8rem) {
+	.bounds-gradient-base;
+	&:before,
+	&:after {
+		height: 100%;
+		width: @width;
+		top: 0;
+	}
+	&:before { left: 0; }
+	&:after { right: 0; }
+	&:before { #gradient.horizontal(@start, @end); }
+	&:after { #gradient.horizontal(@end, @start); }
+}
+
+.bounds-gradient-vertical(@start: white, @end: rgba(255,255,255,0), @height: 8rem) {
+	.bounds-gradient-base;
+	&:before,
+	&:after {
+		height: @height;
+		width: 100%;
+		left: 0;
+	}
+	&:before { top: 0; }
+	&:after { bottom: 0; }
+	&:before { #gradient.vertical(@start, @end); }
+	&:after { #gradient.vertical(@end, @start); }
+}
+
+// EXEMPLE
+// .bounds-gradient-vertical-black {
+// 	.bounds-gradient-vertical(black, rgba(0,0,0,0));
+// }
