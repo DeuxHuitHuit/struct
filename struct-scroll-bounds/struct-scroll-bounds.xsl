@@ -52,11 +52,11 @@
 			<xsl:choose>
 				<!-- X -->
 				<xsl:when test="$axis = 'x'">
-					<add class="overflow-horizontal-auto" />
+					<add class="overflow-x-auto" />
 				</xsl:when>
 				<!-- Y -->
 				<xsl:otherwise>
-					<add class="overflow-vertical-auto" />
+					<add class="overflow-y-auto" />
 				</xsl:otherwise>
 			</xsl:choose>
 			<!-- STATE (scroll bounds) -->
