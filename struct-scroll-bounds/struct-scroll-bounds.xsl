@@ -29,6 +29,7 @@
 		<xsl:variable name="attr">
 			<add class="overflow-hidden relative" />
 			<add class="transition-scroll-bounds-ctn" />
+			<!-- Add custom transition class here -->
 			<!-- AXIS -->
 			<xsl:choose>
 				<!-- X -->
