@@ -42,6 +42,7 @@
 			</xsl:choose>
 			<!-- STATE (scroll bounds) -->
 			<add class="js-scroll-bounds-ctn" />
+			<!-- Pass custom gradient class to $ext-attr -->
 			<xsl:copy-of select="$ext-attr"/>
 			<add dev-component="struct-scroll-bounds" />
 		</xsl:variable>
