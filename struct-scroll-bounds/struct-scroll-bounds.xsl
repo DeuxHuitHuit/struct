@@ -29,7 +29,6 @@
 		<xsl:variable name="attr">
 			<add class="overflow-hidden relative" />
 			<add class="transition-scroll-bounds-ctn" />
-			<!-- Add custom transition class here -->
 			<!-- AXIS -->
 			<xsl:choose>
 				<!-- X -->
@@ -43,6 +42,7 @@
 			</xsl:choose>
 			<!-- STATE (scroll bounds) -->
 			<add class="js-scroll-bounds-ctn" />
+			<!-- Pass custom gradient class to $ext-attr -->
 			<xsl:copy-of select="$ext-attr"/>
 			<add dev-component="struct-scroll-bounds" />
 		</xsl:variable>
